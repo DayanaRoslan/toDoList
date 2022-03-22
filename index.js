@@ -9,7 +9,7 @@ $(document).ready(function(){
       success: function (response, textStatus) {
         $('#todo-list-tasks').empty();
         response.tasks.forEach(function (task) {
-          $('#todo-list-tasks').append('<input type="checkbox" class="mark-complete" data-id="' + task.id + '"' + (task.completed ? 'checked' : '') + '> <div class="row"><p class="col-xs-8">' + task.content + '</p><button class="btn delete" data-id="' + task.id + '">Delete</button>');
+          $('#todo-list-tasks').append('<input type="checkbox" class="mark-complete" data-id="' + task.id + '"' + (task.completed ? 'checked' : '') + '> <div class="row"><p class="col-xs-8">' + task.content + '</p><button class="btn btn-danger delete" data-id="' + task.id + '">Delete</button>');
         });
       },
       error: function (request, textStatus, errorMessage) {
@@ -60,7 +60,7 @@ $(document).ready(function(){
     });
   }
 
-  $(document).on('click', '.btn.delete', function () {
+  $(document).on('click', '.btn.btn-danger.delete', function () {
     deleteTask($(this).data('id'));
   });
 

@@ -1,3 +1,14 @@
+.container{
+ border: 2px solid rgb(233, 95, 118);
+ margin: 0 auto;
+ margin-top: 15%;
+ width: 50%;
+ border-radius: 25px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 h2 {
-  color: blue;
+  color: rgb(231, 231, 104);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
